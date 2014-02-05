@@ -1,14 +1,13 @@
-var center = new google.maps.LatLng(45.7, 3.216667);
+var center = new google.maps.LatLng(46.7, 3.216667);
 var zoom = 6;
 var legend_width = '150px';
 var tableid = 3635199;
 var location_column = 'geometry';
-var colors = ['#D01C8B','#F1B6DA','#F7F7F7','#B8E186','#4DAC26'];
+var colors = ['#333333','#F1B6DA','#F7F7F7','#666','#4DAC26'];
 colors = ['#FEF0D9','#FDCC8A','#FC8D59','#E34A33','#B30000'];
     var columns = {
-  'Winner': [
-    {}
-  ],
+  
+  
 'Francois HOLLANDE, Socialist, %': [
    
  {
@@ -132,7 +131,12 @@ function initialize() {
   
   map = new google.maps.Map(document.getElementById('map_canvas'), {
     center: center,
+      streetViewControl: false,
+      panControl: false,
     zoom: zoom,
+     zoomControlOptions: {
+    style: google.maps.ZoomControlStyle.SMALL
+  },
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
   
@@ -143,7 +147,9 @@ function initialize() {
       stylers: [
         { visibility: 'off' }
       ]
-    },{ elementType: "labels", stylers: [ { saturation: -100 } ] },{ elementType: "geometry", stylers: [ { gamma: 0.78 }, { saturation: -100 }, { lightness: 98 } ] },{ featureType: "road", elementType: "geometry", stylers: [ { lightness: -13 } ] }
+    },{ elementType: "labels", stylers: [
+        { visibility: 'off' }
+      ] },{ elementType: "geometry", stylers: [ { gamma: 0.78 }, { saturation: -100 }, { lightness: 98 } ] },{ featureType: "road", elementType: "geometry", stylers: [ { lightness: -13 } ] }
   ];
 
   geocoder = new google.maps.Geocoder();
@@ -173,7 +179,7 @@ function usePostcode(address) {
   geocoder.geocode({'address': address}, function (results, status) {
     console.log(results);
     map.setCenter(results[0].geometry.location);
-    map.setZoom(12);
+    map.setZoom(7);
   });
 }
 
