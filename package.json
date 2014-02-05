@@ -1,0 +1,47 @@
+{
+  "name": "minnpost-crime",
+  "version": "0.0.3",
+  "author": "MinnPost <support@minnpost.com>",
+  "homepage": "https://github.com/MinnPost/minnpost-crime",
+  "description": "MinnPost Crime",
+  "contributors": [
+    {
+      "name": "Alan Palazzolo",
+      "email": "apalazzolo@minnpost.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinnPost/minnpost-crime.git"
+  },
+  "keywords": [
+    "minnpost"
+  ],
+  "dependencies": {
+    "csv": "0.3.x",
+    "underscore": "1.4.x",
+    "topojson": "~1.1.4",
+    "celeri": "~0.3.3",
+    "grunt-s3": "~0.2.0-alpha.2"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jst": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-gss-pull": "*",
+    "grunt-s3": "*",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/MinnPost/minnpost-crime/blob/master/LICENSE.txt"
+    }
+  ]
+}
